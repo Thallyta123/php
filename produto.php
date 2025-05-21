@@ -120,19 +120,10 @@ include("cabecalho.php");
 
         </div>
     </div>
-        <footer>
-            <div class="container">
-                <img src="img/logo-rodape.png" alt="Logo da Mirror Fashion">
 
+        <!-- Aqui vai vir o miolo da página depois -->
 
-                <ul class="social">
-                    <li><a href="http://facebook.com/mirrorfashion">facebook</a></li>
-                    <li><a href="http://twitter.com/mirrorfashion">twitter</a></li>
-                    <li><a href="http://plus.google.com/mirrorfashion">google+</a></li>
-                </ul>
-
-            </div>
-        </footer>
+        <?php include("rodape.php"); ?>
 
 <script type="text/javascript" src="js/hello.js"></script>
 
