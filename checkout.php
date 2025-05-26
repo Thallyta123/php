@@ -55,16 +55,16 @@
                         <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan" class="img-thumbnail mb-3">
                         <dl>
                             <dt>Produto</dt>
-                            <dd>Fuzzy Cardigan</dd>
+                            <dd><?= $POST['nome'] ?></dd>
 
                             <dt>Cor</dt>
-                            <dt>verde</dt>
+                            <dd><?= $_POST['cor'] ?></dd>
 
                             <dt>Tamanho</dt>
-                            <dd>40</dd>
+                            <dd><?= $_POST['tamanho'] ?></dd>
 
                             <dt>Preços</dt>
-                            <dd>R$ 129,90</dd>
+                            <dd>R$ <?= $_POST['preco'] ?></dd>
                         </dl>
                     </div>
                 </div>

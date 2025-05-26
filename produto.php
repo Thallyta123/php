@@ -10,7 +10,12 @@ include("cabecalho.php");
             <h1>Fuzzy Cardigan</h1>
             <p>por apenas R$ 129,90</p>
 
-            <form>
+
+
+            <form action="checkout.php" method="POST">
+            <inupt type="hidden" name="nome" value="Fuzzy Cardigan">
+            <input type="hiddem" name="preco" value="129,99">
+            
                 <fieldset class="cores">
                     <legend>Escolha a cor</legend>
 

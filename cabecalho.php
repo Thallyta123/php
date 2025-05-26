@@ -31,5 +31,3 @@
 
   
   <body>
-    <?php include("cabecalho.php"); ?>
-  </body>
