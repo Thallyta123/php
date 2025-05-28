@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
-  </head>
+    <link rel="stylesheet" href="css/produtos.css">
+</head>
   
   <header class="container">
     <h1><img src="img/logo.png" alt="Mirror Fashion"></h1>

@@ -6,6 +6,12 @@ include("cabecalho.php");
 
     <div class="container">
 
+    <?php
+        $conexao = mysqli_connect ("127.0.0.1.", "root", "", "WD4");
+        $dados = mysqli_query($conexao, "SELECT * form produtos");
+        $produto = mysqli_fetch_array($dados);
+        
+
         <div class="produto">
             <h1>Fuzzy Cardigan</h1>
             <p>por apenas R$ 129,90</p>
