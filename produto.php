@@ -7,16 +7,18 @@ include("cabecalho.php");
     <div class="container">
 
     <?php
-        $conexao = mysqli_connect ("127.0.0.1.", "root", "", "WD4");
+        $conexao = mysqli_connect("127.0.0.1.", "root", "", "WD4");
         $dados = mysqli_query($conexao, "SELECT * form produtos");
         $produto = mysqli_fetch_array($dados);
+        ?>
         
-
+    <h1><?= $produto['nome'] ?></h1>
+    <p>por apenas <?= $produto['preco'] ?></p>
+    
+        <p><?= $produto['descricao'] ?></p>
         <div class="produto">
             <h1>Fuzzy Cardigan</h1>
             <p>por apenas R$ 129,90</p>
-
-
 
             <form action="checkout.php" method="POST">
             <inupt type="hidden" name="nome" value="Fuzzy Cardigan">
