@@ -7,18 +7,18 @@ include("cabecalho.php");
     <div class="container">
 
     <?php
-        $conexao = mysqli_connect("127.0.0.1.", "root", "", "WD4");
-        $dados = mysqli_query($conexao, "SELECT * form produtos");
+        $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+        $dados = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $_GET[id]");
         $produto = mysqli_fetch_array($dados);
+        
         ?>
         
-    <h1><?= $produto['nome'] ?></h1>
-    <p>por apenas <?= $produto['preco'] ?></p>
-    
-        <p><?= $produto['descricao'] ?></p>
+        
+
         <div class="produto">
-            <h1>Fuzzy Cardigan</h1>
-            <p>por apenas R$ 129,90</p>
+            <h1><?= $produto['nome'] ?></h1>
+            <p>por apenas <?= $produto['preco'] ?></p>
+ 
 
             <form action="checkout.php" method="POST">
             <inupt type="hidden" name="nome" value="Fuzzy Cardigan">
@@ -29,7 +29,7 @@ include("cabecalho.php");
 
                     <input type="radio" name="cor" id="verde" checked value="verde">
                     <label for="verde">
-                        <img src="img/produtos/foto1-verde.png" alt="produto na cor verde">
+                        <img src="img/produtos/foto<?= $produto['id'] ?>-verde.png" alt="produto na cor verde">
                     </label>
 
                     <input type="radio" name="cor" id="rosa" value="rosa">
@@ -100,10 +100,7 @@ include("cabecalho.php");
 
             <h2>Detalhes do produto</h2>
 
-            <p>Esse é o melhor casaco de Cardigã que você ja viu. Excelente
-                material italiano com estampa desenhada pelos artesãos da
-                comunidade de Krotor nas linhas gregas. compre já e receba hoje
-                mesmo pela nossa entrega a jato.</p>
+                    <p><?= $produto['descricao'] ?></p>
 
             <table>
                 <thead>

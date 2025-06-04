@@ -82,7 +82,7 @@
       <h2>Novidades</h2>
       <ol>
         <li>
-          <a href="produto.php">
+          <a href="produto.php?id=1">
             <img src="img/produtos/miniatura1.png">
             <figure>
               <figcaption>Fuzz Cardigan por R$129,90</figcaption>
@@ -90,7 +90,7 @@
           </a>
         </li>
         <li>
-          <a href="produto.php">
+          <a href="produto.php?id=2">
             <img src="img/produtos/miniatura2.png">
             <figure>
               <figcaption>Fuzz Cardigan por R$129,90</figcaption>
