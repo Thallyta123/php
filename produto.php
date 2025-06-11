@@ -14,15 +14,14 @@ include("cabecalho.php");
         ?>
         
         
-
         <div class="produto">
             <h1><?= $produto['nome'] ?></h1>
             <p>por apenas <?= $produto['preco'] ?></p>
  
 
             <form action="checkout.php" method="POST">
-            <inupt type="hidden" name="nome" value="Fuzzy Cardigan">
-            <input type="hiddem" name="preco" value="129,99">
+            <input type="hidden" name="nome" value="<?= $produto['nome'] ?>">
+            <input type="hiddem" name="preco" value="<?= $produto['preco'] ?>">
             
                 <fieldset class="cores">
                     <legend>Escolha a cor</legend>
