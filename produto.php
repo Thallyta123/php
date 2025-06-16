@@ -21,7 +21,8 @@ include("cabecalho.php");
 
             <form action="checkout.php" method="POST">
             <input type="hidden" name="nome" value="<?= $produto['nome'] ?>">
-            <input type="hiddem" name="preco" value="<?= $produto['preco'] ?>">
+            <input type="hidden" name="preco" value="<?= $produto['preco'] ?>">
+            <input type="hidden" name="id" value="<?= $produto['id'] ?>">
             
                 <fieldset class="cores">
                     <legend>Escolha a cor</legend>

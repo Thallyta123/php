@@ -52,10 +52,10 @@
                     </div>
 
                     <div class="card-body">
-                        <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan" class="img-thumbnail mb-3">
+                        <img src="img/produtos/foto<?= $_POST['id'] ?>-<?= $_POST['cor'] ?>.png" alt="Fuzzy Cardigan" class="img-thumbnail mb-3">
                         <dl>
                             <dt>Produto</dt>
-                            <dd><?= $POST['nome'] ?></dd>
+                            <dd><?= $_POST['nome'] ?></dd>
 
                             <dt>Cor</dt>
                             <dd><?= $_POST['cor'] ?></dd>
