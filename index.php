@@ -81,54 +81,24 @@
     <section class="painel novidades">
       <h2>Novidades</h2>
       <ol>
+      <?php
+        $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+        $dados = mysqli_query($conexao, "SELECT * FROM produtos");
+      
+      while ($produto = mysqli_fetch_array($dados)):        
+        ?>
         <li>
-          <a href="produto.php?id=1">
-            <img src="img/produtos/miniatura1.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produto.php?id=2">
-            <img src="img/produtos/miniatura2.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produto.php">
-            <img src="img/produtos/miniatura3.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produto.php">
-            <img src="img/produtos/miniatura4.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produto.php">
-            <img src="img/produtos/miniatura5.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="produto.php">
-            <img src="img/produtos/miniatura6.png">
-            <figure>
-              <figcaption>Fuzz Cardigan por R$129,90</figcaption>
-            </figure>
-          </a>
-        </li>
+					<a href="produto.php?id=<?=	$produto['id'] ?>">
+						<figure>
+							<img src="img/produtos/miniatura<?= $produto['id'] ?>.png"
+									alt="<?=	$produto['nome'] ?>">
+							<figcaption><?=	$produto['nome'] ?>	por	<?=	$produto['preco']	?></figcaption>
+						</figure>
+				  </a>
+			 </li>
+
+       <?php endwhile; ?>
+        
       </ol>
     </section>
     <section class="painel mais-vendidos">
