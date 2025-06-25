@@ -7,3 +7,11 @@ function mostraTamanho(){
 }
 
 inputTamanho.oninput = mostraTamanho 
+
+twttr.widgets.createMentionButton(
+  "TwitterDev",
+  document.getElementById("container"),
+  {
+    size:"large"
+  }
+);
